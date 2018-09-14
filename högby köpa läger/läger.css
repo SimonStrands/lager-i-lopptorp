@@ -1,0 +1,329 @@
+/******************************/
+/*  Självaste upplägget       */
+/******************************/
+html{
+  
+}
+#backgroundonleft
+{
+    
+}
+body{
+    
+    margin:0;
+    background: url(img/idaspringer02.JPG) no-repeat,
+                url(img/04bildpåip02.jpg)no-repeat;
+    background-position: right 100%, left 100%;
+    background-size: auto calc(100% - 30vw), auto calc(100% - 30vw);
+    
+}
+#welcometext{
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 4vw;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); 
+    margin:0;
+    background-color:rgba(255, 255, 255, 0.4);    
+}
+#welcomediv {
+    width:100%;
+    height:30vw;
+    background-image: url(img/01bildpaip02.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    
+}
+#blackline{
+    position: absolute;
+    background-color:black;
+    width:100%;
+    height:2px;
+}
+
+#papercontent{
+    
+    background-color: white;
+    margin:0 auto;
+    width:70%;
+    box-shadow: 0px 0px 15px grey; 
+}
+/*Om det är mindre än 780 pixlar brett
+så tar vi papercontent och gör den bredare*/
+@media only screen and (max-width:780px){
+    #papercontent{
+        width:100%;
+    }
+    body{
+        background:none;
+    }
+}
+/******************************/
+/*      Rubrik text           */
+/******************************/
+#vivet {
+    margin:0;
+    text-align: center;
+    font-size: 1.5em;
+    padding-bottom: 10px;
+    padding-top:30px;
+}
+/******************************/
+/* bakgrunder                 */
+/******************************/
+
+
+
+
+/******************************/
+/*    Om självaste inlägget   */
+/******************************/
+#davidspringa {
+    margin-top:auto;
+    margin-bottom: auto;
+    width:90%;
+    float:right;
+    grid-area: friiimg;
+    box-shadow: 0px 0px 15px grey;
+}
+
+
+#förstatext {
+    padding-left:10%;
+    grid-area: förstatext;
+     margin-top:auto;
+    margin-bottom: auto;
+}
+
+#första {
+    display: grid;
+    grid-template: "förstatext friiimg"
+                    /60% 40%;
+}
+/******************************/
+/* Fotbollen                  */
+/******************************/
+#fotbollsbild {
+    margin-top:auto;
+    margin-bottom: auto;
+    width:90%;
+    float:right;
+    grid-area: fotimg;
+    box-shadow: 0px 0px 15px grey;
+}
+
+#andratext {
+    padding-left:10%;
+    padding-right:5%;
+    grid-area: andratext;
+    
+}
+
+#fotbollh2 {
+    
+    grid-area: fotbollh2;
+}
+#fotbolldiv{
+    display: grid;
+    grid-template:  ".         fotbollh2 .         fotimg"1fr
+                    "andratext andratext andratext fotimg"4fr
+                    /20% 20% 20% 40%;
+}
+/******************************/
+/*  Friidrotten               */
+/******************************/
+
+#friih2 {
+    grid-area: friidrotth2;
+}
+
+#tredjetext {
+    padding-left:10%;
+    padding-right:5%;
+    grid-area: tredjetext;
+}
+
+#friitraning {
+    margin-top:auto;
+    margin-bottom: auto;
+    width:90%;
+    float:right;
+    grid-area: friiimg;
+    box-shadow: 0px 0px 15px grey;
+}
+
+#friidrottdiv {
+    display: grid;
+    grid-template:  ".          friidrotth2 .         friiimg       "1fr
+                    "tredjetext tredjetext tredjetext friiimg"4fr
+                    /20% 20% 20% 40%;
+}
+
+/******************************/
+/*  Övriga sporter            */
+/******************************/
+
+
+#ösh2 {
+    text-align: center;
+}
+
+#östext {
+    text-align: center;
+}
+
+/******************************/
+/*  Mat och boende            */
+/******************************/
+
+
+/******************************/
+/*  Kontakter                 */
+/******************************/
+.border{
+    border-radius:         10px;
+    box-shadow: 0px 0px 15px grey;
+    
+}
+#calle{
+    width:100%;
+    grid-area: calle;
+}
+#calleimg {
+    display:block;
+    margin: auto;
+    padding-bottom: 10%;
+    
+}
+
+#calletext {
+    text-align: center;
+    padding-top: 5%;
+}
+#jonne
+{
+    width:100%;
+    grid-area: jonne;
+}
+
+#jonnetext {
+   text-align: center;
+    padding-top: 5%; 
+}
+
+#jonneimg {
+    display:block;
+    margin: auto;
+    padding-bottom: 10%;
+}
+
+#kontakterna {
+    margin:auto;
+    box-shadow: 0px 0px 15px grey;
+    border-radius:         10px;
+    width:90%;
+    display:grid;
+    grid-template:  ". .     .  .    ."
+                    ". calle . jonne ."
+                    /1fr 3fr 1fr 3fr 1fr
+    
+}
+
+#kontakt {
+    text-align: center;
+}
+
+#högbymailp {
+    margin-bottom:0;
+}
+
+/*****************/
+/*  Footer       */
+/*****************/
+
+
+
+#footer {
+    width: 100%;
+    height:120px;
+    background-color:lightgray;
+    display: grid;
+    grid-template:  ". .    . .    .    .    .   " 10%
+                    ". mail . face hogb kalm olan" 70%
+        
+                    ". mail . .    .    gjor gjor" 20%
+                    /5% 20% 5% 17% 17% 17% 19%;
+}
+.logor {
+    width:4em;
+}
+#pfooter {
+    float:left;
+    height:100%;
+    width:100%;
+    margin:0;
+    font-size: 15px;
+    grid-area: mail;
+}
+#gjordav {
+    height:100%;
+    margin:0;
+    grid-area: gjor;
+    text-align: right;
+}
+
+#facebook {
+    height:100%;
+    width:auto;
+    grid-area: face;
+}
+
+#Hogby {
+    height:100%;
+    width:auto;
+    grid-area: hogb;
+}
+
+#olandrun {
+    height:90%;
+    width:auto;
+    grid-area: olan;
+}
+
+#irunkalmar {
+    height:100%;
+    width:auto;
+    grid-area: kalm;
+}
+@media only screen and (max-width:753px){
+    #irunkalmar {width:100%;
+    height:auto;}
+    #olandrun {width:100%;
+    height:auto;}
+    #Hogby {width:100%;
+    height:auto;}
+    #facebook {width:100%;
+    height:auto;}
+    #footer{
+        height:200px;
+    }
+}
+
+
+/*******************/
+/* struktur på text*/
+/*******************/
+
+
+#blackline2 {
+    background-color:black;
+    width:100%;
+    height:2px;
+}
+
+
+#högbymaildiv {
+    padding-bottom: 30px;
+}
