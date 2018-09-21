@@ -1,0 +1,627 @@
+/******************************/
+/*  Självaste upplägget       */
+/******************************/
+html{
+  scroll-behavior: smooth;
+
+}
+body{
+    background-color: whitesmoke;
+    position: relative;
+    z-index: 0;
+    margin:0;
+    background: url(img/sidobild.JPG) no-repeat,
+                url(img/öland04.png)no-repeat;
+    
+    background-position: right 29vw, 
+                         left 31vw;
+    
+    background-size: 43% auto, 
+                     16% auto;
+    
+    background-attachment: scroll, scroll;
+    background-color: white;
+    
+}
+/******************************/
+/*       Meny                 */
+/******************************/
+
+/*menu list*/
+#menulist{
+    display: none;
+    height: auto;
+    width:100%;
+    background-color: black;
+    position: absolute;
+    z-index: 30;
+}
+/*menu icon*/
+#menulessthan524px{
+    position: absolute;
+}
+#menuicon{
+    display: block;
+    cursor: pointer;
+}
+.bar1, .bar2, .bar3 {
+    margin-left:2px;
+    width: 25px;
+    height: 4px;
+    background-color: white;
+    margin-bottom:6px;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+#menu{
+    cursor: pointer;
+    position:absolute;
+    background-color: rgba(0, 0, 0, 0.2);
+    line-height: 30px;
+    width:524px;
+    height:30px;    
+}
+.inmenu:hover {
+    background: rgba(0, 0, 0, 1.0);
+    
+}
+.menulinks{
+    text-decoration: none;
+    color:white;
+}
+.inmenu {
+    text-align: center;
+    font-size: small;
+    font-family: Verdana;
+    color:white;
+    width:auto;
+    padding-left:1%; 
+    padding-right: 1%;
+    float: left;
+}
+#menulessthan524px{
+    height:30px;
+    width:30px;
+    background-color: black;
+    display:none;
+}
+@media only screen and (max-width:524px) {
+    #menu{
+        display:none;
+    }
+    #menulessthan524px{
+        display:block;
+    }
+}
+
+
+/******************************/
+/*       välkommen text       */
+/******************************/
+#welcometext{
+    font-size:big;
+    font-family: Verdana;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 4vw;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); 
+    margin:0;
+    background-color:rgba(255, 255, 255, 0.4); 
+}
+#welcomediv {
+    width:100%;
+    height:30vw;
+    background-image: url(img/01bildpaip02.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    
+}
+#blackline{
+    position: absolute;
+    background-color:black;
+    width:100%;
+    height:2px;
+}
+
+#papercontent{
+    position: relative;
+    z-index: -1;
+    background-color: white;
+    margin:0 auto;
+    width:70%;
+    box-shadow: 0px 0px 15px grey; 
+}
+/*Om det är mindre än 780 pixlar brett
+så tar vi papercontent och gör den bredare*/
+@media only screen and (max-width:780px){
+    #papercontent{
+        width:100%;
+    }
+    body{
+        background:none;
+    }
+}
+@keyframes fadein2{
+    from {opacity: 0}
+    to {opacity:1}
+}
+@keyframes fadeout2{
+    from {opacity: 1}
+    to {opacity:0}
+}
+/******************************/
+/*           image slider     */
+/******************************/
+
+#sliderdiv{
+    border-bottom-right-radius:10px; 
+    border-bottom-left-radius:10px;
+    position: relative;
+    width:100%;
+    height:35vw;
+    background-color: #e1e1df;
+    display:grid;
+    grid-template:  ". .       .      .       ."1fr
+                    ". slider1 .      slider2 ."9fr
+                    ". .       .      .       ."0.5fr
+                    ". linkga  linkga linkga  ."1fr
+                    /1fr 20fr 1fr 20fr 1fr;
+}
+#slider1{
+    margin-top: 1%;
+    float: left;
+    grid-area: slider1;
+}
+#slider2{
+    margin-top: 1%;
+    float: right;
+    grid-area: slider2;
+}
+.sliderbild{
+    border:solid 1px black;
+    position:absolute;
+    display: block;
+}
+#linkbild{
+    grid-area: linkga;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+@keyframes fadein {
+        from {opacity: 0} 
+        to {opacity: 1}
+       
+}
+@keyframes fadeout {
+        0% {opacity: 0}
+        50%{opacity:1}
+        100% {opacity: 0}
+       
+}
+/*******************/
+/* bildgalleri     */
+/*******************/
+
+#bildgalleri{
+    display:none;
+    background-color: white;
+    margin:0 auto;
+    width:70%;
+    box-shadow: 0px 0px 15px grey
+}
+.galleryhover:hover{
+    opacity:0.8;
+    border-width:0px 2px 0px 2px;
+    cursor: pointer;
+}
+.galleryhover:target{
+    display:none;
+}
+.galleryhover{
+    margin-top:3px;
+}
+@media only screen and (max-width:780px){
+    #bildgalleri{
+        width:100%;
+    }
+}
+/******************************/
+/*      Rubrik text           */
+/******************************/
+#vivet {
+    margin:0;
+    text-align: center;
+    font-size: 1.5em;
+    padding-bottom: 10px;
+    padding-top:30px;
+}
+/******************************/
+/* bakgrunder                 */
+/******************************/
+
+
+
+
+/******************************/
+/*    Om självaste inlägget   */
+/******************************/
+#davidspringa {
+    margin-top:auto;
+    margin-bottom: auto;
+    width:90%;
+    float:right;
+    grid-area: friiimg;
+    box-shadow: 0px 0px 15px grey;
+}
+
+
+#förstatext {
+    padding-left:10%;
+    grid-area: förstatext;
+     margin-top:auto;
+    margin-bottom: auto;
+}
+
+#första {
+    display: grid;
+    grid-template: "förstatext friiimg"
+                    /60% 40%;
+}
+@media only screen and (max-width:630px){
+    #första{
+        grid-template:  "förstatext"
+                        "friiimg"
+    }
+    #davidspringa{
+        float:none;
+        margin-top:20px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    #förstatext{
+        padding-right: 10%;
+    }
+}
+
+/******************************/
+/* Fotbollen                  */
+/******************************/
+#fotbollsbild {
+    margin-top:auto;
+    margin-bottom: auto;
+    width:90%;
+    float:right;
+    grid-area: fotimg;
+    box-shadow: 0px 0px 15px grey;
+}
+
+#andratext {
+    padding-left:10%;
+    padding-right:5%;
+    grid-area: andratext;
+    
+}
+
+#fotbollh2 {
+    
+    grid-area: fotbollh2;
+}
+#fotbolldiv{
+    display: grid;
+    grid-template:  ".         fotbollh2 .         fotimg"1fr
+                    "andratext andratext andratext fotimg"4fr
+                    /20% 20% 20% 40%;
+}
+/******************************/
+/*  Friidrotten               */
+/******************************/
+
+#friih2 {
+    grid-area: friidrotth2;
+}
+
+#tredjetext {
+    padding-left:10%;
+    padding-right:5%;
+    grid-area: tredjetext;
+}
+
+#friitraning {
+    margin-top:auto;
+    margin-bottom: auto;
+    width:90%;
+    float:right;
+    grid-area: friiimg;
+    box-shadow: 0px 0px 15px grey;
+}
+
+#friidrottdiv {
+    display: grid;
+    grid-template:  ".          friidrotth2 .         friiimg       "1fr
+                    "tredjetext tredjetext tredjetext friiimg"4fr
+                    /20% 20% 20% 40%;
+}
+
+/******************************/
+/*  Övriga sporter            */
+/******************************/
+
+
+#ösh2 {
+    text-align: center;
+}
+
+#östext {
+    text-align: center;
+}
+
+/******************************/
+/*  Mat och boende            */
+/******************************/
+
+
+/******************************/
+/*  Kontakter                 */
+/******************************/
+.border{
+    border-radius:         10px;
+    box-shadow: 0px 0px 15px grey;
+    
+}
+#calle{
+    width:180px;
+    grid-area: calle;
+    margin-left: auto;
+    margin-right: auto;
+}
+#calleimg {
+    display:block;
+    margin: auto;
+    padding-bottom: 10%;
+    
+}
+
+#calletext {
+    text-align: center;
+    padding-top: 5%;
+}
+#jonne
+{
+    width:180px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-area: jonne;
+}
+
+#jonnetext {
+   text-align: center;
+    padding-top: 5%; 
+}
+
+#jonneimg {
+    display:block;
+    margin: auto;
+    padding-bottom: 10%;
+}
+
+#kontakterna {
+    margin:auto;
+    width:90%;
+    display:grid;
+    grid-template:  ". .     .  .    ."
+                    ". calle . jonne ."
+                    /1fr 2fr 1fr 2fr 1fr
+    
+}
+
+#kontakt {
+    text-align: center;
+}
+
+#högbymailp {
+    margin-bottom:0;
+}
+@media only screen and (max-width:400px){
+    #jonne{
+        width:90px;
+        margin-left: auto;
+        margin-right: auto;
+        grid-area: jonne;
+    }
+    #calle{
+        width:90px;
+        grid-area: calle;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .border{
+        border-radius:         0px;
+        box-shadow: 0px 0px 0px grey;
+    }
+}
+/*****************/
+/*  Footer       */
+/*****************/
+
+
+
+#footer {
+    width: 100%;
+    height:200px;
+    background-color:lightgray;
+    display: grid;
+    grid-template:  ".   .      .      .      .      .     .      .      .      .   " 10%
+                    ".   mail   .      face   hogb   hogi  foth   kalm   olan   .   " 50%
+                    ".   mail   .      .      huvp   friip fotp   gjor   gjor   gjor" 10%
+                    ".   .      .      .      .      .     .      gjor   gjor   gjor" 10%
+                    /2% 23%     30%    7%     7%     7%    7%     7%     7%     3%;
+}
+.logor {
+    width:4em;
+}
+.logor:hover {
+    cursor: pointer;
+}
+#fotp{
+    grid-area: fotp;
+    margin:0;
+    text-align: center;
+}
+#pfooter {
+    float:left;
+    height:100%;
+    width:100%;
+    margin:0;
+    font-size: 100%;
+    grid-area: mail;
+}
+#gjordav {
+    height:100%;
+    margin:0;
+    grid-area: gjor;
+    text-align: right;
+    background-color: antiquewhite;
+}
+
+#facebook {
+    height:auto;
+    width:100%;
+    grid-area: face;
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#Hogby {
+    height:auto;
+    width:80%;
+    grid-area: hogb;
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#olandrun {
+    height:auto;
+    width:90%;
+    grid-area: olan;
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+}
+#friihögdiv {
+    grid-area:hogi;
+    height:100%;
+    width:100%;
+    
+}
+
+#irunkalmar {
+    height:auto;
+    width:100%;
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    grid-area: kalm;
+}
+#friihögimg {
+    height:auto;
+    width:80%;
+    display: block;
+    margin-left:auto;
+    margin-right:auto;    
+}
+
+#fotbollshogby {
+    height:auto;
+    width:80%;
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    grid-area: foth;
+}
+#huvudhemsida{
+    grid-area: huvp;
+    margin:0;
+    text-align: center;
+}
+
+@media only screen and (max-width:753px){
+    #friip          {height:100%; width:auto;}
+    #fotp           {height:100%; width:auto;}
+    #gjordav        {height:100%; width:100%;}
+    #facebook       {height:100%; width:auto;}
+    #Hogby          {height:100%; width:auto;}
+    #olandrun       {height:200%; width:auto;}
+    #friihögdiv     {height:100%; width:auto;}
+    #irunkalmar     {height:100%; width:auto;}
+    #friihögimg     {height:100%; width:auto;}
+    #fotbollshogby  {height:100%; width:auto;}
+    #huvudhemsida   {height:100%; width:100%; font-size: 0.6em}
+    #footer {
+        grid-template:  ".   .    .   .     .    ." 5%
+                        ".   mail .   hogb  face ." 12.5%
+                        ".   mail .   huvp  face ." 12.5%
+                        ".   mail .   hogi  kalm ." 12.5%
+                        ".   mail .   friip kalm ." 12.5%
+                        ".   .    .   foth  olan ." 12.5%
+                        ".   .    .   fotp  .    ." 12.5%
+                        ".   .    gjor gjor gjor gjor" 20%
+                        /5%  30%  20% 20%   20%  5%
+    
+    }
+}
+
+
+/*******************/
+/* struktur på text*/
+/*******************/
+
+
+#blackline2 {
+    background-color:black;
+    width:100%;
+    height:2px;
+}
+
+
+#högbymaildiv {
+    padding-bottom: 30px;
+}
+
+
+#friip {
+    margin:0;
+    grid-area: friip;
+    text-align: center;
+}
+
+
+#back {
+    margin:0;
+    cursor: pointer;
+    width: 100%;
+}
+
+.pmargin0 {
+    margin:0px 0px 0px 10px;
+}
+
+
