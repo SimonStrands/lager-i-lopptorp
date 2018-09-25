@@ -89,10 +89,10 @@ if (start === true) {
 ////////////
 function resize(){
     
-    var divheight = document.getElementById("slider1").clientHeight;
+    //var divheight = document.getElementById("slider1").clientHeight;
     var divwidth = document.getElementById("slider1").clientWidth;
     for(var i = 0; i  < fullsliderlengt; i++) {
-        document.getElementsByClassName("sliderbild")[i].style.height = divheight + "px";
+        //document.getElementsByClassName("sliderbild")[i].style.height = divheight + "px";
         document.getElementsByClassName("sliderbild")[i].style.width = divwidth + "px";
     }
 }
