@@ -42,7 +42,7 @@ var fullsliderlengt = slidsbilder1.length + slidsbilder2.length;
 var lastpic;
 var lastpic2;
 
-
+var start2 = true;
 
 function sliderfunction() {
     zindex++;
@@ -71,7 +71,11 @@ function sliderfunction() {
         x2++;
     }
     setTimeout(sliderfunction, 4000)
-    
+    if(start2 == true)
+        {
+            resize();
+            start2 == false;
+        }
 }
 function tabortbild(lastpic, lastpic2){
         setTimeout(function(){lastpic.style.display = "none";
@@ -81,18 +85,16 @@ function tabortbild(lastpic, lastpic2){
 var start = true;
 if (start === true) {
     sliderfunction();
-    resize();
     start = false;  
 }
   ////////////
  //img size//
 ////////////
 function resize(){
-    
-    //var divheight = document.getElementById("slider1").clientHeight;
     var divwidth = document.getElementById("slider1").clientWidth;
+    
     for(var i = 0; i  < fullsliderlengt; i++) {
-        //document.getElementsByClassName("sliderbild")[i].style.height = divheight + "px";
+        
         document.getElementsByClassName("sliderbild")[i].style.width = divwidth + "px";
     }
 }

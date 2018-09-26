@@ -179,19 +179,19 @@ så tar vi papercontent och gör den bredare*/
     border-bottom-left-radius:10px;
     position: relative;
     width:100%;
+    height: 10wv;
     background-color: #e1e1df;
     display:grid;
-    grid-template:  ". .       .      .       ."1fr
-                    ". slider1 .      slider2 ."10fr
-                    ". .       .      .       ."0.5fr
-                    ". linkga  linkga linkga  ."1fr
+    grid-template:  ". .       .      .       ."20px
+                    ". slider1 .      slider2 ."23vw
+                    ". .       .      .       ."10px
+                    ". linkga  linkga linkga  ."30px
                     /1fr 20fr 1fr 20fr 1fr;
 }
 #slider1{
     margin-top: 1%;
     float: left;
     grid-area: slider1;
-    height:auto;
 }
 #slider2{
     margin-top: 1%;
@@ -248,6 +248,21 @@ så tar vi papercontent och gör den bredare*/
     #bildgalleri{
         width:100%;
     }
+    #sliderdiv{
+    border-bottom-right-radius:10px; 
+    border-bottom-left-radius:10px;
+    position: relative;
+    width:100%;
+    height: 10wv;
+    background-color: #e1e1df;
+    display:grid;
+    grid-template:  ". .       .      .       ."20px
+                    ". slider1 .      slider2 ."30vw
+                    ". .       .      .       ."10px
+                    ". linkga  linkga linkga  ."30px
+                    /1fr 20fr 1fr 20fr 1fr;
+    }
+    
 }
 
 /*Big pic*/
@@ -356,7 +371,6 @@ så tar vi papercontent och gör den bredare*/
 }
 
 #andratext {
-    padding-left:10%;
     padding-right:5%;
     grid-area: andratext;
     
@@ -367,8 +381,10 @@ så tar vi papercontent och gör den bredare*/
     grid-area: fotbollh2;
 }
 #fotbolldiv{
+    width:90%;
+    margin:auto;
     display: grid;
-    grid-template:  ".         fotbollh2 .         fotimg"1fr
+    grid-template:  "fotbollh2 fotbollh2 .         fotimg"1fr
                     "andratext andratext andratext fotimg"4fr
                     /20% 20% 20% 40%;
 }
@@ -381,7 +397,6 @@ så tar vi papercontent och gör den bredare*/
 }
 
 #tredjetext {
-    padding-left:10%;
     padding-right:5%;
     grid-area: tredjetext;
 }
@@ -390,15 +405,16 @@ så tar vi papercontent och gör den bredare*/
     margin-top:auto;
     margin-bottom: auto;
     width:90%;
-    height:100%;
     float:right;
     grid-area: friiimg;
     box-shadow: 0px 0px 15px grey;
 }
 
 #friidrottdiv {
+    width:90%;
+    margin:auto;
     display: grid;
-    grid-template:  ".          friidrotth2 .         friiimg       "1fr
+    grid-template:  "friidrotth2 friidrotth2 .         friiimg       "1fr
                     "tredjetext tredjetext tredjetext friiimg"4fr
                     /20% 20% 20% 40%;
 }
@@ -407,20 +423,24 @@ så tar vi papercontent och gör den bredare*/
 /******************************/
 #triatlon{
     width:90%;
-    margin:auto
+    margin:auto;
+    display: grid;
+    grid-template:  "trih2 ."
+                    "tritext triimg"
 }
 #triatlonbild{
     width:90%;
     display:block;
     margin-left:auto;
     margin-right:auto;
+    grid-area: triimg;
     
 }
-#fjardetext{
- text-align: center;   
+#fjardetext{ 
+    grid-area: tritext;
 }
 #triatlonh2{
-    text-align: center;
+    grid-area: trih2;
 }
 /******************************/
 /*  Övriga sporter            */
@@ -740,3 +760,14 @@ så tar vi papercontent och gör den bredare*/
 }
 
 
+
+
+
+/*detta är den där speciella bilden*/
+#sliderbild111 {
+    border-bottom: 5vw;
+    border-style: solid;
+    border-color: lightgray;
+    margin-bottom: auto;
+    margin-top:auto;
+}
